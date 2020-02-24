@@ -1,7 +1,15 @@
 <html>
 <body>
-    <p>Marcos</p>
-	<p>&</p>
-    <p>Jonathan</p>
+    <div>
+    <h1><a href="/">Meu Blog</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.data_publicacao }}</p>
+        <h2><a href="">{{ post.titulo }}</a></h2>
+        <p>{{ post.texto|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 </body>
 </html>
